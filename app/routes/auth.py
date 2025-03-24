@@ -50,7 +50,7 @@ def register():
             new_user = User(username=username, email=email, password_hash=password)
             db.session.add(new_user)
             db.session.commit()
-            flash('Usuario creado con exito', 'success')
+            flash('Usuario creado con exito continua', 'success')
             return redirect(url_for('auth.login'))
         
     return render_template('auth/register.html')
